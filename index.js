@@ -1,4 +1,5 @@
 const ngrok = require("ngrok");
+const fs = require('fs');
 
 if (!process.env.TARGET_HOST || !process.env.TARGET_PORT) {
   throw new Error(
@@ -37,6 +38,15 @@ ngrok
   .then(url => {
     console.log(`The ngrok tunnel is active`);
     console.log(`${url} ---> ${targetAddress}`);
+
+    fs.writeFile("/tmp/bkp/ngrok.txt", url, function (err) {
+      if (err) {
+        return console.log(err);
+      }
+      
+      console.log("The file was saved!");
+    });
+
   })
   .catch(error => {
     console.error(error);
