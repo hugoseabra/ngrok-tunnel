@@ -38,7 +38,7 @@ console.log(options);
 console.log('')
 
 ngrok
-  .connect()
+  .connect(options)
   .then(url => {
     console.log(`The ngrok tunnel is active`);
     console.log(`${url} ---> ${targetAddress}`);
