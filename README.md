@@ -11,7 +11,7 @@ $ docker pull gtriggiano/ngrok-tunnel
 #### ...and use it
 
 ```bash
-$ docker run -it  -e "TARGET_HOST=servicetotunnel" -e "TARGET_PORT=5000" -p 4040 gtriggiano/ngrok-tunnel
+$ docker run -it  -e "TARGET_HOST=servicetotunnel" -e "TARGET_PORT=5000" -p 4040 hugoseabra19/ngrok-tunnel
 ```
 
 ### Env vars (options)
