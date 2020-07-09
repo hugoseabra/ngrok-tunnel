@@ -33,17 +33,22 @@ const options = {
   configPath: "/ngrok.yml"
 };
 
+console.log('')
+console.log(options);
+console.log('')
+
 ngrok
-  .connect(options)
+  .connect()
   .then(url => {
     console.log(`The ngrok tunnel is active`);
     console.log(`${url} ---> ${targetAddress}`);
 
     fs.writeFile("/tmp/bkp/ngrok.txt", url, function (err) {
       if (err) {
-        return console.log(err);
+        console.error(err);
+        process.exit(1);
       }
-      
+
       console.log("The file was saved!");
     });
 
