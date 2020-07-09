@@ -1,6 +1,5 @@
 FROM node:12.18-alpine
-
-LABEL maintainer "Giacomo Triggiano <giacomo@creativecoding.it>"
+LABEL maintainer "Hugo Seabra <hugoseabra19@gmail.com>"
 
 COPY package.json /package.json
 COPY yarn.lock /yarn.lock
