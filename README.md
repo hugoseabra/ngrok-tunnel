@@ -5,7 +5,7 @@ HTTP tunnel service based on [ngrok](https://ngrok.com) and docker.
 #### Get the image
 
 ```bash
-$ docker pull gtriggiano/ngrok-tunnel
+$ docker pull hugoseabra19/ngrok-tunnel
 ```
 
 #### ...and use it
@@ -32,4 +32,4 @@ When working on a project I often need to demo the functionality/design/whatever
 
 I heavily use docker in my dev-to-production process to ensure the maximum portability of the software.
 
-With [ngrok-tunnel](https://hub.docker.com/r/gtriggiano/ngrok-tunnel) I can easily integrate an HTTP tunnel service in my docker-compose.yml(s), letting peoples connect via browser to my running-on-localhost apps from wherever they are!
+With [ngrok-tunnel](https://hub.docker.com/r/hugoseabra19/ngrok-tunnel) I can easily integrate an HTTP tunnel service in my docker-compose.yml(s), letting peoples connect via browser to my running-on-localhost apps from wherever they are!
